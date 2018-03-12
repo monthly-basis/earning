@@ -1,12 +1,10 @@
 CREATE TABLE `earning` (
-    `user_id` int(10) unsigned auto_increment,
-    `username` varchar(255) not null,
-    `password_hash` varchar(255) not null,
-    `welcome_message` text default null,
-    `login_hash` varchar(255) default null,
-    `login_ip` varchar(45) default null,
-    `views` int unsigned not null default 0,
+    `earning_id` int(10) unsigned auto_increment,
+    `user_id` int(10) unsigned not null,
+    `entity_type_id` int(10) unsigned not null,
+    `entity_id` int(10) unsigned not null,
+    `amount` float(4,2) not null,
     `created` datetime not null,
-    PRIMARY KEY (`user_id`),
-    UNIQUE KEY `username` (`username`)
+    PRIMARY KEY (`earning_id`),
+    KEY `user_id` (`user_id`)
 ) charset=utf8;
