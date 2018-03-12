@@ -3,6 +3,7 @@ namespace LeoGalleguillos\EarningTest\Model\Table;
 
 use ArrayObject;
 use Exception;
+use Generator;
 use LeoGalleguillos\Earning\Model\Table as EarningTable;
 use LeoGalleguillos\EarningTest\TableTestCase;
 use Zend\Db\Adapter\Adapter;
@@ -47,5 +48,28 @@ class EarningTest extends TableTestCase
             EarningTable\Earning::class,
             $this->earningTable
         );
+    }
+
+    public function testSelectWhereUserId()
+    {
+        //$this->earningTable->insert(123, 'jpg', 'title', 'description');
+        //$this->earningTable->insert(123, 'png', 'title2', 'description2');
+        $generator = $this->earningTable->selectWhereUserId(123);
+        $this->assertInstanceOf(
+            Generator::class,
+            $generator
+        );
+
+        /*
+        $this->assertSame(
+            $generator->current()['title'],
+            'title'
+        );
+        $generator->next();
+        $this->assertSame(
+            $generator->current()['title'],
+            'title2'
+        );
+         */
     }
 }
