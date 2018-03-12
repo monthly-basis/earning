@@ -24,6 +24,11 @@ class Module
     {
         return [
             'factories' => [
+                EarningTable\Earning::class => function ($serviceManager) {
+                    return new EarningTable\Earning(
+                        $serviceManager->get('main')
+                    );
+                },
             ],
         ];
     }
