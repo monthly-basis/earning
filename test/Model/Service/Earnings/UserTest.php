@@ -19,7 +19,7 @@ class UserTest extends TestCase
         $this->earningTableMock = $this->createMock(
             EarningTable\Earning::class
         );
-        $this->userService = new EarningService\Earnings\User(
+        $this->userEarningsService = new EarningService\Earnings\User(
             $this->earningFactoryMock,
             $this->earningTableMock
         );
@@ -29,7 +29,30 @@ class UserTest extends TestCase
     {
         $this->assertInstanceOf(
             EarningService\Earnings\User::class,
-            $this->userService
+            $this->userEarningsService
         );
+    }
+
+    public function testGetEarnings()
+    {
+        $userEntity = new UserEntity\User();
+        $userEntity->setUserId(123);
+        $this->earningTableMock->method('selectWhereUserId')->willReturn(
+            $this->yieldArrays()
+        );
+
+        $generator = $this->userEarningsService->getEarnings(
+            $userEntity
+        );
+        $this->assertInstanceOf(
+            Generator::class,
+            $generator
+        );
+    }
+
+    protected function yieldArrays()
+    {
+        yield [];
+        yield [];
     }
 }
