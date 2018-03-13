@@ -28,4 +28,36 @@ class TotalTest extends TestCase
             $this->totalUserEarningsService
         );
     }
+
+    public function testGetTotal()
+    {
+        $userEntity = new UserEntity\User();
+        $userEntity->setUserId(123);
+
+        $this->assertSame(
+            0.00,
+            $this->totalUserEarningsService->getTotal($userEntity)
+        );
+
+        $this->earningTableMock->method('selectWhereUserId')->willReturn(
+            $this->yieldArrays()
+        );
+        $this->assertSame(
+            0.06,
+            $this->totalUserEarningsService->getTotal($userEntity)
+        );
+    }
+
+    protected function yieldArrays()
+    {
+        yield [
+            'amount' => '0.01',
+        ];
+        yield [
+            'amount' => '0.02',
+        ];
+        yield [
+            'amount' => '0.03',
+        ];
+    }
 }
