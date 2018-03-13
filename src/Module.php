@@ -13,8 +13,14 @@ class Module
         return [
             'view_helpers' => [
                 'aliases' => [
+                    'getTotalUserEarnings' => EarningHelper\Earnings\User\Total::class,
                 ],
                 'factories' => [
+                    EarningHelper\Earnings\User\Total::class => function ($serviceManager) {
+                        return new EarningHelper\Earnings\User\Total(
+                            $serviceManager->get(EarningService\Earnings\User\Total::class)
+                        );
+                    }
                 ],
             ],
         ];
