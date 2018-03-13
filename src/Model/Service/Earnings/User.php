@@ -26,7 +26,7 @@ class User
      */
     public function getEarnings(UserEntity\User $userEntity) : Generator
     {
-        $generator = $this->earningTable->selectWhereUserId($userEntity->userId());
+        $generator = $this->earningTable->selectWhereUserId($userEntity->getUserId());
         foreach ($generator as $array) {
             yield $this->earningFactory->buildFromArray($array);
         }
