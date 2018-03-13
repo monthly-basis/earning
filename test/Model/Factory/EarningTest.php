@@ -30,12 +30,20 @@ class EarningTest extends TestCase
     public function testBuildFromArray()
     {
         $array = [
-            'user_id' => 1,
-            'created' => '2018-03-12 22:12:23',
+            'user_id'        => 1,
+            'entity_id'      => 1,
+            'entity_type_id' => 1,
+            'type_id'        => 1,
+            'amount'         => '0.01',
+            'created'        => '2018-03-12 22:12:23',
         ];
 
         $earningEntity = new EarningEntity\Earning();
-        $earningEntity->setCreated(new DateTime($array['created']))
+        $earningEntity->setAmount($array['amount'])
+                      ->setCreated(new DateTime($array['created']))
+                      ->setEntityId($array['entity_id'])
+                      ->setEntityTypeId($array['entity_type_id'])
+                      ->setTypeId($array['type_id'])
                       ->setUserId($array['user_id']);
 
         $this->assertEquals(

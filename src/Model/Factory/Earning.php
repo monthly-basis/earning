@@ -22,7 +22,11 @@ class Earning
     public function buildFromArray(array $array) : EarningEntity\Earning
     {
         $earningEntity = new EarningEntity\Earning();
-        $earningEntity->setCreated(new DateTime($array['created']))
+        $earningEntity->setAmount($array['amount'])
+                      ->setCreated(new DateTime($array['created']))
+                      ->setEntityId($array['entity_id'])
+                      ->setEntityTypeId($array['entity_type_id'])
+                      ->setTypeId($array['type_id'])
                       ->setUserId($array['user_id']);
 
         return $earningEntity;
