@@ -3,15 +3,18 @@ namespace LeoGalleguillos\Earning\Model\Service\Earnings;
 
 use Generator;
 use LeoGalleguillos\Earning\Model\Entity as EarningEntity;
+use LeoGalleguillos\Earning\Model\Factory as EarningFactory;
 use LeoGalleguillos\Earning\Model\Table as EarningTable;
 use LeoGalleguillos\User\Model\Entity as UserEntity;
 
 class User
 {
     public function __construct(
+        EarningFactory\Earning $earningFactory,
         EarningTable\Earning $earningTable
     ) {
-        $this->earningTable = $earningTable;
+        $this->earningFactory = $earningFactory;
+        $this->earningTable   = $earningTable;
     }
 
     /**
@@ -23,6 +26,9 @@ class User
      */
     public function getEarnings(UserEntity\User $userEntity) : Generator
     {
-        yield null;
+        $generator = $this->earningTable->selectWhereUserId($userEntity->userId());
+        foreach ($generator as $array) {
+            yield $this->earningFactory->buildFromArray($array);
+        }
     }
 }
