@@ -50,6 +50,32 @@ class EarningTest extends TableTestCase
         );
     }
 
+    public function testInsert()
+    {
+        $this->earningTable->insert(1, 2, 3, 4, 5.67);
+        $this->earningTable->insert(1, 2, 3, 4, 5.67);
+        $this->earningTable->insert(1, 2, 3, 4, 5.67);
+        $this->assertSame(
+            3,
+            $this->earningTable->selectCount()
+        );
+    }
+
+    public function testSelectCount()
+    {
+        $this->assertSame(
+            0,
+            $this->earningTable->selectCount()
+        );
+        $this->earningTable->insert(1, 2, 3, 4, 5.67);
+        $this->earningTable->insert(1, 2, 3, 4, 5.67);
+        $this->earningTable->insert(1, 2, 3, 4, 5.67);
+        $this->assertSame(
+            3,
+            $this->earningTable->selectCount()
+        );
+    }
+
     public function testSelectWhereUserId()
     {
         //$this->earningTable->insert(123, 'jpg', 'title', 'description');

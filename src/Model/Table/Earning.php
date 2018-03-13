@@ -17,6 +17,44 @@ class Earning
         $this->adapter = $adapter;
     }
 
+    public function insert(
+        int $userId,
+        int $entityId,
+        int $entityTypeId,
+        int $typeId,
+        float $amount
+    ) {
+        $sql = '
+            INSERT
+              INTO `earning` (
+                   `user_id`, `entity_id`, `entity_type_id`, `type_id`, `amount`, `created`
+                   )
+            VALUES (:userId, :entityId, :entityTypeId, :typeId, :amount, UTC_TIMESTAMP())
+                 ;
+        ';
+        $parameters = [
+            'userId'       => $userId,
+            'entityId'     => $entityId,
+            'entityTypeId' => $entityTypeId,
+            'typeId'       => $typeId,
+            'amount'       => $amount,
+        ];
+        return $this->adapter
+                    ->query($sql, $parameters)
+                    ->getGeneratedValue();
+    }
+
+    public function selectCount()
+    {
+        $sql = '
+            SELECT COUNT(*) AS `count`
+              FROM `earning`
+                 ;
+        ';
+        $row = $this->adapter->query($sql)->execute()->current();
+        return (int) $row['count'];
+    }
+
     /**
      * Select where user ID.
      *
