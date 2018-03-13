@@ -35,6 +35,11 @@ class Module
                         $serviceManager->get(EarningTable\Earning::class)
                     );
                 },
+                EarningService\Earnings\User\Total::class => function ($serviceManager) {
+                    return new EarningService\Earnings\User\Total(
+                        $serviceManager->get(EarningTable\Earning::class)
+                    );
+                },
                 EarningTable\Earning::class => function ($serviceManager) {
                     return new EarningTable\Earning(
                         $serviceManager->get('main')
