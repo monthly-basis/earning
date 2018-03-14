@@ -4,13 +4,16 @@ namespace LeoGalleguillos\Earning\Model\Factory;
 use DateTime;
 use LeoGalleguillos\Earning\Model\Entity as EarningEntity;
 use LeoGalleguillos\Earning\Model\Table as EarningTable;
+use LeoGalleguillos\Entity\Model\Factory as EntityFactory;
 
 class Earning
 {
     public function __construct(
-        EarningTable\Earning $earningTable
+        EarningTable\Earning $earningTable,
+        EntityFactory\EntityType $entityTypeFactory
     ) {
-        $this->earningTable = $earningTable;
+        $this->earningTable      = $earningTable;
+        $this->entityTypeFactory = $entityTypeFactory;
     }
 
     /**
@@ -28,6 +31,11 @@ class Earning
                       ->setEntityTypeId($array['entity_type_id'])
                       ->setTypeId($array['type_id'])
                       ->setUserId($array['user_id']);
+
+        $entityTypeEntity = $this->entityTypeFactory->buildFromEntityTypeId(
+            $array['entity_type_id']
+        );
+        $earningEntity->setEntityTypeEntity($entityTypeEntity);
 
         return $earningEntity;
     }

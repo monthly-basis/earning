@@ -5,6 +5,7 @@ use LeoGalleguillos\Earning\Model\Factory as EarningFactory;
 use LeoGalleguillos\Earning\Model\Service as EarningService;
 use LeoGalleguillos\Earning\Model\Table as EarningTable;
 use LeoGalleguillos\Earning\View\Helper as EarningHelper;
+use LeoGalleguillos\Entity\Model\Factory as EntityFactory;
 
 class Module
 {
@@ -32,7 +33,8 @@ class Module
             'factories' => [
                 EarningFactory\Earning::class => function ($serviceManager) {
                     return new EarningFactory\Earning(
-                        $serviceManager->get(EarningTable\Earning::class)
+                        $serviceManager->get(EarningTable\Earning::class),
+                        $serviceManager->get(EntityFactory\EntityType::class)
                     );
                 },
                 EarningService\Earnings\User::class => function ($serviceManager) {

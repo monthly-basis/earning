@@ -3,6 +3,7 @@
 return [
     'modules' => [
         'LeoGalleguillos\Earning',
+        'LeoGalleguillos\Entity',
         'LeoGalleguillos\User',
         'Zend\Db',
         'Zend\Router',

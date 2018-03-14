@@ -5,6 +5,8 @@ use DateTime;
 use LeoGalleguillos\Earning\Model\Entity as EarningEntity;
 use LeoGalleguillos\Earning\Model\Factory as EarningFactory;
 use LeoGalleguillos\Earning\Model\Table as EarningTable;
+use LeoGalleguillos\Entity\Model\Entity as EntityEntity;
+use LeoGalleguillos\Entity\Model\Factory as EntityFactory;
 use PHPUnit\Framework\TestCase;
 
 class EarningTest extends TestCase
@@ -14,8 +16,12 @@ class EarningTest extends TestCase
         $this->earningTableMock = $this->createMock(
             EarningTable\Earning::class
         );
+        $this->entityTypeFactoryMock = $this->createMock(
+            EntityFactory\EntityType::class
+        );
         $this->earningFactory = new EarningFactory\Earning(
-            $this->earningTableMock
+            $this->earningTableMock,
+            $this->entityTypeFactoryMock
         );
     }
 
@@ -45,6 +51,12 @@ class EarningTest extends TestCase
                       ->setEntityTypeId($array['entity_type_id'])
                       ->setTypeId($array['type_id'])
                       ->setUserId($array['user_id']);
+
+        $entityTypeEntity = new EntityEntity\EntityType();
+        $this->entityTypeFactoryMock->method('buildFromEntityTypeId')->willReturn(
+            $entityTypeEntity
+        );
+        $earningEntity->setEntityTypeEntity($entityTypeEntity);
 
         $this->assertEquals(
             $earningEntity,

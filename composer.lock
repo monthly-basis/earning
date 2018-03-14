@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "95532182c7901232cee6283ec8f9564e",
-    "content-hash": "14c691bb1e730032f824b78f350d8e4d",
+    "hash": "ad75847d410295753cda3fa4e7d89f0a",
+    "content-hash": "dc07452a7a858baf82362ec9e30370de",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -91,6 +91,37 @@
                 "instantiate"
             ],
             "time": "2015-06-14 21:17:01"
+        },
+        {
+            "name": "leo-galleguillos/entity",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/LeoGalleguillos/Entity.git",
+                "reference": "62276084f137620354388328fe1644ce14f2568f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/LeoGalleguillos/Entity/zipball/62276084f137620354388328fe1644ce14f2568f",
+                "reference": "62276084f137620354388328fe1644ce14f2568f",
+                "shasum": ""
+            },
+            "require": {
+                "zendframework/zend-db": "^2.9",
+                "zendframework/zend-test": "^3.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "LeoGalleguillos\\Entity\\": "src/",
+                    "LeoGalleguillos\\EntityTest\\": "test/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "time": "2018-03-14 06:27:56"
         },
         {
             "name": "leo-galleguillos/flash",
@@ -2667,6 +2698,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "leo-galleguillos/entity": 20,
         "leo-galleguillos/user": 20
     },
     "prefer-stable": false,
