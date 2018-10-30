@@ -27,10 +27,13 @@ class Earning
         $earningEntity = new EarningEntity\Earning();
         $earningEntity->setAmount($array['amount'])
                       ->setCreated(new DateTime($array['created']))
-                      ->setEntityId($array['entity_id'])
                       ->setEntityTypeId($array['entity_type_id'])
                       ->setTypeId($array['type_id'])
                       ->setUserId($array['user_id']);
+
+        if (isset($array['entity_id'])) {
+          $earningEntity->setEntityId($array['entity_id']);
+        }
 
         $entityTypeEntity = $this->entityTypeFactory->buildFromEntityTypeId(
             $array['entity_type_id']
