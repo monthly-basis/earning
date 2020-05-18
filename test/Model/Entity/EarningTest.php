@@ -7,7 +7,7 @@ use PHPUnit\Framework\TestCase;
 
 class EarningTest extends TestCase
 {
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->earningEntity = new EarningEntity\Earning();
     }

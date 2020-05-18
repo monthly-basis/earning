@@ -11,7 +11,7 @@ use PHPUnit\Framework\TestCase;
 
 class UserTest extends TestCase
 {
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->earningFactoryMock = $this->createMock(
             EarningFactory\Earning::class

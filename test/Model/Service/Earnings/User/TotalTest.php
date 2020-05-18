@@ -11,7 +11,7 @@ use PHPUnit\Framework\TestCase;
 
 class TotalTest extends TestCase
 {
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->earningTableMock = $this->createMock(
             EarningTable\Earning::class
