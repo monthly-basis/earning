@@ -21,31 +21,38 @@ class TotalTest extends TestCase
         );
     }
 
-    public function testInitialize()
-    {
-        $this->assertInstanceOf(
-            EarningService\Earnings\User\Total::class,
-            $this->totalUserEarningsService
-        );
-    }
-
-    public function testGetTotal()
+    public function test_getTotal_generatorYieldsZeroRows_totalEarningsAreZero()
     {
         $userEntity = new UserEntity\User();
         $userEntity->setUserId(123);
+
+        $this->earningTableMock->method('selectWhereUserId')->willReturn(
+            $this->getEmptyGenerator()
+        );
 
         $this->assertSame(
             0.00,
             $this->totalUserEarningsService->getTotal($userEntity)
         );
+    }
+
+    public function test_getTotal_generatorYieldsMultipleRows_totalEarningsAreGreaterThanZero()
+    {
+        $userEntity = new UserEntity\User();
+        $userEntity->setUserId(123);
 
         $this->earningTableMock->method('selectWhereUserId')->willReturn(
             $this->yieldArrays()
         );
         $this->assertSame(
-            0.06,
+            1.06,
             $this->totalUserEarningsService->getTotal($userEntity)
         );
+    }
+
+    protected function getEmptyGenerator()
+    {
+        yield from [];
     }
 
     protected function yieldArrays()
@@ -57,7 +64,7 @@ class TotalTest extends TestCase
             'amount' => '0.02',
         ];
         yield [
-            'amount' => '0.03',
+            'amount' => '1.03',
         ];
     }
 }
