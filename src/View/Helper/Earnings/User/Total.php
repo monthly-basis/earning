@@ -3,7 +3,7 @@ namespace LeoGalleguillos\Earning\View\Helper\Earnings\User;
 
 use MonthlyBasis\User\Model\Entity as UserEntity;
 use LeoGalleguillos\Earning\Model\Service as EarningService;
-use Zend\View\Helper\AbstractHelper;
+use Laminas\View\Helper\AbstractHelper;
 
 class Total extends AbstractHelper
 {

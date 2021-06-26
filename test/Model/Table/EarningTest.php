@@ -6,7 +6,7 @@ use Exception;
 use Generator;
 use LeoGalleguillos\Earning\Model\Table as EarningTable;
 use LeoGalleguillos\EarningTest\TableTestCase;
-use Zend\Db\Adapter\Adapter;
+use Laminas\Db\Adapter\Adapter;
 use PHPUnit\Framework\TestCase;
 
 class EarningTest extends TableTestCase
