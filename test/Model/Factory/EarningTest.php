@@ -5,8 +5,8 @@ use DateTime;
 use LeoGalleguillos\Earning\Model\Entity as EarningEntity;
 use LeoGalleguillos\Earning\Model\Factory as EarningFactory;
 use LeoGalleguillos\Earning\Model\Table as EarningTable;
-use LeoGalleguillos\Entity\Model\Entity as EntityEntity;
-use LeoGalleguillos\Entity\Model\Factory as EntityFactory;
+use MonthlyBasis\Entity\Model\Entity as EntityEntity;
+use MonthlyBasis\Entity\Model\Factory as EntityFactory;
 use PHPUnit\Framework\TestCase;
 
 class EarningTest extends TestCase

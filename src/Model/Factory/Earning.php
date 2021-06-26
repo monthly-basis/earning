@@ -4,7 +4,7 @@ namespace LeoGalleguillos\Earning\Model\Factory;
 use DateTime;
 use LeoGalleguillos\Earning\Model\Entity as EarningEntity;
 use LeoGalleguillos\Earning\Model\Table as EarningTable;
-use LeoGalleguillos\Entity\Model\Factory as EntityFactory;
+use MonthlyBasis\Entity\Model\Factory as EntityFactory;
 
 class Earning
 {

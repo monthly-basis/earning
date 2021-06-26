@@ -5,7 +5,7 @@
     "require": {
         "laminas/laminas-test": "^3.1",
         "laminas/laminas-db": "^2.9",
-        "leo-galleguillos/entity": "^1.0",
+        "monthly-basis/entity": "^2.0",
         "leo-galleguillos/user": "^1.0"
     },
     "autoload": {

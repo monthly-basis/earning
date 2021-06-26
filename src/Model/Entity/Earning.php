@@ -2,7 +2,7 @@
 namespace LeoGalleguillos\Earning\Model\Entity;
 
 use DateTime;
-use LeoGalleguillos\Entity\Model\Entity as EntityEntity;
+use MonthlyBasis\Entity\Model\Entity as EntityEntity;
 use LeoGalleguillos\Earning\Model\Entity as EarningEntity;
 
 class Earning

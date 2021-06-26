@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a9b7443fc580174ddf27fa27fccf14e4",
+    "content-hash": "9908e3dea91a0f028bd83be2abf227b3",
     "packages": [
         {
             "name": "brick/varexporter",
@@ -1539,43 +1539,6 @@
             "time": "2021-06-24T12:49:22+00:00"
         },
         {
-            "name": "leo-galleguillos/entity",
-            "version": "v1.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/LeoGalleguillos/Entity.git",
-                "reference": "279eb394d18fd1ed5d7a04066e678578863cd15b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/LeoGalleguillos/Entity/zipball/279eb394d18fd1ed5d7a04066e678578863cd15b",
-                "reference": "279eb394d18fd1ed5d7a04066e678578863cd15b",
-                "shasum": ""
-            },
-            "require": {
-                "laminas/laminas-db": "^2.9",
-                "laminas/laminas-test": "^3.1",
-                "monthly-basis/laminas-test": "^2.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "LeoGalleguillos\\Entity\\": "src/",
-                    "LeoGalleguillos\\EntityTest\\": "test/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "support": {
-                "issues": "https://github.com/LeoGalleguillos/Entity/issues",
-                "source": "https://github.com/LeoGalleguillos/Entity/tree/v1.0.2"
-            },
-            "abandoned": "monthly-basis/entity",
-            "time": "2021-06-11T01:13:07+00:00"
-        },
-        {
             "name": "leo-galleguillos/user",
             "version": "v1.3.1",
             "source": {
@@ -1614,6 +1577,42 @@
             },
             "abandoned": "monthly-basis/user",
             "time": "2021-06-10T22:53:03+00:00"
+        },
+        {
+            "name": "monthly-basis/entity",
+            "version": "v2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/monthly-basis/entity.git",
+                "reference": "d5f0491e1ed24579c3283a2514120083d86162cf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/monthly-basis/entity/zipball/d5f0491e1ed24579c3283a2514120083d86162cf",
+                "reference": "d5f0491e1ed24579c3283a2514120083d86162cf",
+                "shasum": ""
+            },
+            "require": {
+                "laminas/laminas-db": "^2.9",
+                "laminas/laminas-test": "^3.1",
+                "monthly-basis/laminas-test": "^2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "MonthlyBasis\\Entity\\": "src/",
+                    "MonthlyBasis\\EntityTest\\": "test/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "support": {
+                "issues": "https://github.com/monthly-basis/entity/issues",
+                "source": "https://github.com/monthly-basis/entity/tree/v2.0.0"
+            },
+            "time": "2020-11-08T19:58:15+00:00"
         },
         {
             "name": "monthly-basis/flash",

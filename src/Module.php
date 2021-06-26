@@ -5,7 +5,7 @@ use LeoGalleguillos\Earning\Model\Factory as EarningFactory;
 use LeoGalleguillos\Earning\Model\Service as EarningService;
 use LeoGalleguillos\Earning\Model\Table as EarningTable;
 use LeoGalleguillos\Earning\View\Helper as EarningHelper;
-use LeoGalleguillos\Entity\Model\Factory as EntityFactory;
+use MonthlyBasis\Entity\Model\Factory as EntityFactory;
 
 class Module
 {
