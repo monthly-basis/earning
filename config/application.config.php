@@ -4,7 +4,7 @@ return [
     'modules' => [
         'LeoGalleguillos\Earning',
         'MonthlyBasis\Entity',
-        'LeoGalleguillos\User',
+        'MonthlyBasis\User',
         'Zend\Db',
         'Zend\Router',
     ],

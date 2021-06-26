@@ -1,7 +1,7 @@
 <?php
 namespace LeoGalleguillos\EarningTest\View\Helper\Earnings\User;
 
-use LeoGalleguillos\User\Model\Entity as UserEntity;
+use MonthlyBasis\User\Model\Entity as UserEntity;
 use LeoGalleguillos\Earning\Model\Service as EarningService;
 use LeoGalleguillos\Earning\View\Helper as EarningHelper;
 use PHPUnit\Framework\TestCase;

@@ -1,7 +1,7 @@
 <?php
 namespace LeoGalleguillos\Earning\View\Helper\Earnings\User;
 
-use LeoGalleguillos\User\Model\Entity as UserEntity;
+use MonthlyBasis\User\Model\Entity as UserEntity;
 use LeoGalleguillos\Earning\Model\Service as EarningService;
 use Zend\View\Helper\AbstractHelper;
 
