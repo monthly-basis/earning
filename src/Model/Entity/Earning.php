@@ -1,9 +1,9 @@
 <?php
-namespace LeoGalleguillos\Earning\Model\Entity;
+namespace MonthlyBasis\Earning\Model\Entity;
 
 use DateTime;
 use MonthlyBasis\Entity\Model\Entity as EntityEntity;
-use LeoGalleguillos\Earning\Model\Entity as EarningEntity;
+use MonthlyBasis\Earning\Model\Entity as EarningEntity;
 
 class Earning
 {

@@ -1,7 +1,7 @@
 <?php
-namespace LeoGalleguillos\Earning\Model\Service\Earnings\User;
+namespace MonthlyBasis\Earning\Model\Service\Earnings\User;
 
-use LeoGalleguillos\Earning\Model\Table as EarningTable;
+use MonthlyBasis\Earning\Model\Table as EarningTable;
 use MonthlyBasis\User\Model\Entity as UserEntity;
 
 class Total

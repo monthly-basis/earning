@@ -1,5 +1,5 @@
 <?php
-namespace LeoGalleguillos\Earning\Model\Table;
+namespace MonthlyBasis\Earning\Model\Table;
 
 use Exception;
 use Generator;

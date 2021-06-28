@@ -1,7 +1,7 @@
 <?php
-namespace LeoGalleguillos\EarningTest;
+namespace MonthlyBasis\EarningTest;
 
-use LeoGalleguillos\Earning\Module;
+use MonthlyBasis\Earning\Module;
 use PHPUnit\Framework\TestCase;
 use Laminas\Mvc\Application;
 

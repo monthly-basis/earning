@@ -1,8 +1,8 @@
 <?php
-namespace LeoGalleguillos\Earning\View\Helper\Earnings\User;
+namespace MonthlyBasis\Earning\View\Helper\Earnings\User;
 
 use MonthlyBasis\User\Model\Entity as UserEntity;
-use LeoGalleguillos\Earning\Model\Service as EarningService;
+use MonthlyBasis\Earning\Model\Service as EarningService;
 use Laminas\View\Helper\AbstractHelper;
 
 class Total extends AbstractHelper

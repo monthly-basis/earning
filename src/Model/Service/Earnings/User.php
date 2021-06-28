@@ -1,10 +1,10 @@
 <?php
-namespace LeoGalleguillos\Earning\Model\Service\Earnings;
+namespace MonthlyBasis\Earning\Model\Service\Earnings;
 
 use Generator;
-use LeoGalleguillos\Earning\Model\Entity as EarningEntity;
-use LeoGalleguillos\Earning\Model\Factory as EarningFactory;
-use LeoGalleguillos\Earning\Model\Table as EarningTable;
+use MonthlyBasis\Earning\Model\Entity as EarningEntity;
+use MonthlyBasis\Earning\Model\Factory as EarningFactory;
+use MonthlyBasis\Earning\Model\Table as EarningTable;
 use MonthlyBasis\User\Model\Entity as UserEntity;
 
 class User

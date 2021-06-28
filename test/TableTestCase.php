@@ -1,5 +1,5 @@
 <?php
-namespace LeoGalleguillos\EarningTest;
+namespace MonthlyBasis\EarningTest;
 
 use Laminas\Db\Adapter\Adapter;
 use PHPUnit\Framework\TestCase;

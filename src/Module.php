@@ -1,10 +1,10 @@
 <?php
-namespace LeoGalleguillos\Earning;
+namespace MonthlyBasis\Earning;
 
-use LeoGalleguillos\Earning\Model\Factory as EarningFactory;
-use LeoGalleguillos\Earning\Model\Service as EarningService;
-use LeoGalleguillos\Earning\Model\Table as EarningTable;
-use LeoGalleguillos\Earning\View\Helper as EarningHelper;
+use MonthlyBasis\Earning\Model\Factory as EarningFactory;
+use MonthlyBasis\Earning\Model\Service as EarningService;
+use MonthlyBasis\Earning\Model\Table as EarningTable;
+use MonthlyBasis\Earning\View\Helper as EarningHelper;
 use MonthlyBasis\Entity\Model\Factory as EntityFactory;
 
 class Module

@@ -1,11 +1,11 @@
 <?php
-namespace LeoGalleguillos\EarningTest\Model\Service\Earnings;
+namespace MonthlyBasis\EarningTest\Model\Service\Earnings;
 
 use Generator;
-use LeoGalleguillos\Earning\Model\Entity as EarningEntity;
-use LeoGalleguillos\Earning\Model\Factory as EarningFactory;
-use LeoGalleguillos\Earning\Model\Service as EarningService;
-use LeoGalleguillos\Earning\Model\Table as EarningTable;
+use MonthlyBasis\Earning\Model\Entity as EarningEntity;
+use MonthlyBasis\Earning\Model\Factory as EarningFactory;
+use MonthlyBasis\Earning\Model\Service as EarningService;
+use MonthlyBasis\Earning\Model\Table as EarningTable;
 use MonthlyBasis\User\Model\Entity as UserEntity;
 use PHPUnit\Framework\TestCase;
 

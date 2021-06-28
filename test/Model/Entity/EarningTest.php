@@ -1,8 +1,8 @@
 <?php
-namespace LeoGalleguillos\EarningTest\Model\Entity;
+namespace MonthlyBasis\EarningTest\Model\Entity;
 
 use DateTime;
-use LeoGalleguillos\Earning\Model\Entity as EarningEntity;
+use MonthlyBasis\Earning\Model\Entity as EarningEntity;
 use PHPUnit\Framework\TestCase;
 
 class EarningTest extends TestCase

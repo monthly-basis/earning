@@ -1,10 +1,10 @@
 <?php
-namespace LeoGalleguillos\EarningTest\Model\Factory;
+namespace MonthlyBasis\EarningTest\Model\Factory;
 
 use DateTime;
-use LeoGalleguillos\Earning\Model\Entity as EarningEntity;
-use LeoGalleguillos\Earning\Model\Factory as EarningFactory;
-use LeoGalleguillos\Earning\Model\Table as EarningTable;
+use MonthlyBasis\Earning\Model\Entity as EarningEntity;
+use MonthlyBasis\Earning\Model\Factory as EarningFactory;
+use MonthlyBasis\Earning\Model\Table as EarningTable;
 use MonthlyBasis\Entity\Model\Entity as EntityEntity;
 use MonthlyBasis\Entity\Model\Factory as EntityFactory;
 use PHPUnit\Framework\TestCase;

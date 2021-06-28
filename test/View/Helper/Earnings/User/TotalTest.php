@@ -1,9 +1,9 @@
 <?php
-namespace LeoGalleguillos\EarningTest\View\Helper\Earnings\User;
+namespace MonthlyBasis\EarningTest\View\Helper\Earnings\User;
 
 use MonthlyBasis\User\Model\Entity as UserEntity;
-use LeoGalleguillos\Earning\Model\Service as EarningService;
-use LeoGalleguillos\Earning\View\Helper as EarningHelper;
+use MonthlyBasis\Earning\Model\Service as EarningService;
+use MonthlyBasis\Earning\View\Helper as EarningHelper;
 use PHPUnit\Framework\TestCase;
 
 class TotalTest extends TestCase
